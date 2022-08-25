@@ -14,7 +14,7 @@ const Admin = () => {
     return (
         <div>
             <p>admin</p>
-            <img src={require("../images/spacejoy-YI2YkyaREHk-unsplash.jpg")} alt="propertyphoto" />
+            {/* <img src={require("../images/spacejoy-YI2YkyaREHk-unsplash.jpg")} alt="propertyphoto" /> */}
             <GuestList guests={guests} />
         </div>
     )
