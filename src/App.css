@@ -11,8 +11,6 @@
   padding: 0;
 }
 
-@import "~react-image-gallery/styles/css/image-gallery.css";
-
 .App {
   font-family: 'Roboto', sans-serif;
   text-align: center;
