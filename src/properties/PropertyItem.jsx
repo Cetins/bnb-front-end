@@ -1,14 +1,14 @@
 import React from "react";
-import { SecondTitle } from "../home/Headers";
+
 
 const PropertyItem = ({ property }) => {
 
-    const propertyHeading = `${property.bedroomCount} bed ${property.type} in ${property.location}`
+    const propertyHeading = `${property.bedCount} bed ${property.type} in ${property.location}`
 
     return  (
         <React.Fragment>
-            <SecondTitle title={propertyHeading} />
-            <Text context={property.description} />
+            <h2>{propertyHeading}</h2>
+            <p>{property.description}</p>
         </React.Fragment>
     )
 
