@@ -1,15 +1,11 @@
 import React, { useEffect, useState } from "react";
-import LoginButton from "../login/LoginButton";
-import LogoutButton from "../login/LogoutButton";
+import LogComponent from "../login/LogComponent";
 import Profile from "../login/Profile";
 import PropertyService from "../services/PropertyService"
-import PropertyItem from "../properties/PropertyItem";
+import PropertyList from "../properties/PropertyList";
 
 const Home = () => {
     const [properties, setProperties] = useState([])
-
-    const property = properties[0];
-
 
     useEffect(() => {
         PropertyService.getProperties()
@@ -18,11 +14,8 @@ const Home = () => {
 
     return (
         <>
-            <h1>Home</h1>
-            <LoginButton />
-            <LogoutButton />
-            <Profile />
-            <PropertyItem property={property} />
+            <LogComponent />
+            <PropertyList properties={properties} />
         </>
     )
 }
