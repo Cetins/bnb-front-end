@@ -4,8 +4,8 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { Auth0Provider } from '@auth0/auth0-react';
-import "./styles/button.css";
-import "./styles/images.css";
+import "./static/styles/button.css";
+import "./static/styles/images.css";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
