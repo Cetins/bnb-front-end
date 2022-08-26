@@ -11,8 +11,24 @@
 }
 
 .container-children {
-    flex: 0 1 25em;
     flex-direction: column;
     height: 25em;
-    margin: 5px;
+    margin: .5em;
+}
+
+.children-left-align {
+    display: grid;
+    justify-items: flex-start;
+
+}
+
+.rating-span {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: .5em;
+}
+
+.rating-span>h3 {
+    margin-right: auto;
 }
