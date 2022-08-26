@@ -9,7 +9,7 @@ const PropertyPreview = ({ property }) => {
     
     return  (
         <div className="container-children" >
-            <img className="list-cover-img" src={require('../static/images/' + property.coverImage + '.jpg')} />
+            <img className="list-preview-img" src={require('../static/images/' + property.coverImage + '.jpg')} />
             <span className="rating-span">
                 <h3>{property.location}</h3>
                 <span className="icon-container">
