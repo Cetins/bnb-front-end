@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const PropertyItem = ({ property }) => {
+const PropertyPreview = ({ property }) => {
 
     const propertyHeading = `${property.bedCount} bed ${property.type} in ${property.location}`
     
@@ -9,15 +9,18 @@ const PropertyItem = ({ property }) => {
     
     return  (
         <div className="test" >
-            <h2>{propertyHeading}</h2>
-            <h3>£ {property.rate} per night</h3> 
             <img className="list-cover-img" src={require('../static/images/' + property.coverImage + '.jpg')} />
-            <p>{property.description}</p>
+            <h3>{property.location}</h3>
+            <div className="icon-container">
+                <span class="material-icons">star</span>
+                <span> {property.rating}</span>
+            </div>
+            <p>{propertyHeading}</p>
+            <p>£ {property.rate} per night</p>
             <Link to={url} >more...</Link>
-            {/* <button className="button" >more...</button> */}
         </div>
     )
 
 }
 
-export default PropertyItem;
+export default PropertyPreview;
