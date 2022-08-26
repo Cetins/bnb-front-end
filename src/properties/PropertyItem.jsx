@@ -11,7 +11,7 @@ const PropertyItem = ({ property }) => {
         <div className="test" >
             <h2>{propertyHeading}</h2>
             <h3>£ {property.rate} per night</h3> 
-            <img className="list-cover-img" src={require('../images/' + property.coverImage + '.jpg')} />
+            <img className="list-cover-img" src={require('../static/images/' + property.coverImage + '.jpg')} />
             <p>{property.description}</p>
             <Link to={url} >more...</Link>
             {/* <button className="button" >more...</button> */}
