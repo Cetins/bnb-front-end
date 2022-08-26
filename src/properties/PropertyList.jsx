@@ -7,7 +7,7 @@ const PropertyList = ({ properties }) => {
     })
 
     return (
-        <div className="container-main">
+        <div className="container-flex">
             <ul className="container-parent" >
                 { itemList }
             </ul>

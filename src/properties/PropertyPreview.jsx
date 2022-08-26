@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Rating from "./Rating";
 
 const PropertyPreview = ({ property }) => {
 
@@ -12,10 +13,7 @@ const PropertyPreview = ({ property }) => {
             <img className="list-preview-img" src={require('../static/images/' + property.coverImage + '.jpg')} />
             <span className="rating-span">
                 <h3>{property.location}</h3>
-                <span className="icon-container">
-                    <span class="material-icons">star</span>
-                    <h3> {property.rating}</h3>
-                </span>
+                <Rating property={property} />
             </span>
             <div className="children-left-align">
                 <p>{propertyHeading}</p>

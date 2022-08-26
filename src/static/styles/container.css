@@ -1,7 +1,12 @@
 
-.container-main {
+.container-flex {
     display: flex;
     justify-content: center;
+}
+
+.container-grid {
+    display: grid;
+    justify-items: center;
 }
 
 .container-parent {
@@ -19,7 +24,6 @@
 .children-left-align {
     display: grid;
     justify-items: flex-start;
-
 }
 
 .rating-span {
@@ -31,4 +35,9 @@
 
 .rating-span>h3 {
     margin-right: auto;
+}
+
+.text-container {
+    width: 50em;
+    text-align: start;
 }
