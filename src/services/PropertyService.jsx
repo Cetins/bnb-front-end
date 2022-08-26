@@ -1,9 +1,14 @@
-const baseURL = 'http://localhost:8080/api/properties'
+const baseURL = 'http://localhost:8080/api/properties/'
 
 const PropertyService = {
     getProperties() {
         return fetch(baseURL)
             .then(res => res.json());
+    },
+
+    findProperty(id) {
+      return fetch(baseURL + id)
+          .then(res => res.json());
     },
 
     updateProperty(property) {

@@ -4,6 +4,7 @@ import Menu from './menu/Menu';
 import Home from './home/Home';
 import './App.css';
 import Admin from './admin/Admin';
+import Property from './properties/Property';
 
 const PrivateRoute = () => {
   const auth = null;
@@ -18,7 +19,7 @@ function App() {
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/admin' element={<Admin />} />
-          {/* <Route exact path='/myshop'element={<Login />} /> */}
+          <Route path='/property/:id' element={<Property />} />
         </Routes>
         {/* <Footer /> */}
       </Router>
