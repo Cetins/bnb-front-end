@@ -8,6 +8,7 @@ import "./static/styles/button.css";
 import "./static/styles/images.css";
 import "./static/styles/container.css"
 import "./static/styles/icons.css"
+import "./static/styles/review.css"
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
