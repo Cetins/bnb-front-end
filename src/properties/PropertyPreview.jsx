@@ -10,7 +10,7 @@ const PropertyPreview = ({ property }) => {
     
     return  (
         <div className="card" >
-            <img src={require('../static/images/' + property.coverImage + '.jpg')} />
+            <img src={require('../static/images/property/' + property.coverImage + '.jpg')} />
             <span className="rating-span">
                 <h3>{property.location}</h3>
                 <Rating rating={property.rating} />

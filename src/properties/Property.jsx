@@ -3,6 +3,9 @@ import { useParams } from "react-router-dom";
 import Rating from "./Rating";
 import PropertyService from "../services/PropertyService";
 import Description from "./Description";
+import CheckInAfter from "./CheckInAfter";
+import CheckOutBefore from "./CheckOutBefore";
+import ReviewList from "../reviews/ReviewList";
 
 const Property = () => {
 
@@ -21,18 +24,26 @@ const Property = () => {
     return  (
         <div className="container-grid">
             <span className="rating-span">
-                <Rating property={property} />
+                <Rating rating={property.rating} />
                 <h3> , { property.location }</h3>
             </span>
             <br/>
 
-            <img className="cover-img" src={require('../static/images/' + property.coverImage + '.jpg')} />
+            <img className="cover-img" src={require('../static/images/property/' + property.coverImage + '.jpg')} />
             <br/>
 
             <div className="children-left-align">
-                <h3>£ {property.rate} per night, {property.bedCount} bed, hosted by {property.host.firstName}</h3> 
+                <h2>{property.type} in {property.location}, hosted by {property.host.firstName}</h2> 
                 <br/>
+                
                 <Description text={property.description} />
+                <br/>
+
+                <CheckInAfter time={property.checkInAfter} />
+                <CheckOutBefore time={property.checkOutBefore} />
+                <br/> 
+
+                <ReviewList  reviews={property.reviews}/>
             </div> 
         </div>
     )
