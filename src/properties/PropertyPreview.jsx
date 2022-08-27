@@ -9,13 +9,13 @@ const PropertyPreview = ({ property }) => {
     const url = "/property/" + property.id
     
     return  (
-        <div className="container-children" >
-            <img className="list-preview-img" src={require('../static/images/' + property.coverImage + '.jpg')} />
+        <div className="card" >
+            <img src={require('../static/images/' + property.coverImage + '.jpg')} />
             <span className="rating-span">
                 <h3>{property.location}</h3>
-                <Rating property={property} />
+                <Rating rating={property.rating} />
             </span>
-            <div className="children-left-align">
+            <div>
                 <p>{propertyHeading}</p>
                 <p>£ {property.rate * 3} for 3 nights</p>
             </div>

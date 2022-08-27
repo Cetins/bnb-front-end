@@ -7,6 +7,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    list-style: none;
 }
 
 .card {
@@ -14,11 +15,20 @@
     margin: .5em;
 }
 
+.card>div {
+    text-align: left;
+}
+
 .card>img {
-    width: 15;
-    height: 15;
+    width: 20em;
+    height: 20em;
     object-fit: cover;
     border-radius: 1em;
+}
+
+.rating-span {
+    display: flex;
+    justify-content: space-between;
 }
 
 /* .card>button {
