@@ -1,7 +1,8 @@
-.list-preview-img {
-    height: 300px;
-    width: 300px;
+.review-img {
     border-radius: 1em;
+    width: 20em;
+    height: 20em;
+    object-fit: cover;
 }
 
 .cover-img {

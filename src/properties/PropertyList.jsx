@@ -1,9 +1,9 @@
 import React from "react";
-import PropertyPreview from "./PropertyPreview";
+import PropertyCard from "./preview-card/PropertyCard";
 
 const PropertyList = ({ properties }) => {
     const itemList = properties.map((property, index) => {
-        return <li key={index}><PropertyPreview property={property}/></li>
+        return <li key={index}><PropertyCard property={property}/></li>
     })
 
     return (

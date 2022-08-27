@@ -1,8 +1,19 @@
-.centered {
-    margin: 0 auto;
-    padding: 0 1em;
+/* For page itself */
+.parent-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
+/* For containers in the page */
+.child-container {
+    background-color: var(--container);
+    box-shadow: var(--shadow);
+    margin: 1em;
+    padding: 1em;
+}
+
+/* For listings in the search or similar card base displays */
 .cards {
     display: flex;
     flex-wrap: wrap;
@@ -19,16 +30,22 @@
     text-align: left;
 }
 
-.card>img {
-    width: 20em;
-    height: 20em;
-    object-fit: cover;
-    border-radius: 1em;
-}
-
 .rating-span {
     display: flex;
     justify-content: space-between;
+}
+
+.text-container {
+    border: solid 1px red;
+    max-width: 50em;
+}
+
+.icon-container {
+    display: flex;
+}
+
+.icon-container:last-child {
+    margin-left: auto;
 }
 
 /* .card>button {
