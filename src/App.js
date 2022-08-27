@@ -5,6 +5,7 @@ import Home from './home/Home';
 import './App.css';
 import Admin from './admin/Admin';
 import Property from './properties/Property';
+import LogComponent from './login/LogComponent';
 
 const PrivateRoute = () => {
   const auth = null;
@@ -20,6 +21,7 @@ function App() {
           <Route path='/' element={<Home />} />
           <Route path='/admin' element={<Admin />} />
           <Route path='/property/:id' element={<Property />} />
+          <Route path='/account' element={<LogComponent />} />
         </Routes>
         {/* <Footer /> */}
       </Router>
