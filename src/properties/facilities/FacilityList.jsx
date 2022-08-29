@@ -4,7 +4,13 @@ import Facility from "./Facility";
 const FacilityList = ({ facilities }) => {
     const itemList = facilities.map(facility => <Facility key={facility.id} facility={facility} />)
 
-    return <li>{ itemList }</li>
+    return (
+        <div>
+            <h3>Facilities</h3>
+            <hr></hr>
+            <ul>{ itemList }</ul>
+        </div>
+    )
 }
 
 export default FacilityList;

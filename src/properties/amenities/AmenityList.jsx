@@ -8,7 +8,11 @@ const AmenityList = ({ categories, amenities }) => {
     })
 
     return (
-        <ul>{ itemList }</ul>
+        <div>
+            <h3>Amenities</h3>
+            <hr></hr>
+            <ul className="cards">{ itemList }</ul>
+        </div>
     )
 }
 

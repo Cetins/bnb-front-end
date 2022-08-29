@@ -9,8 +9,9 @@ const AmenityCategory = ({ category, amenities }) => {
 
 
     return (
-        <div className="framed-component">
+        <div>
             <h3>{ category }</h3>
+            <hr></hr>
             <ul>{ itemList }</ul>
         </div>
     )

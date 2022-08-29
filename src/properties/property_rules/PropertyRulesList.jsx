@@ -7,6 +7,7 @@ const PropertyRulesList = ({ propertyRules }) => {
     return (
         <div>
             <h3>Rules</h3>
+            <hr></hr>
             <ul>{ listItems }</ul>
         </div>
     )

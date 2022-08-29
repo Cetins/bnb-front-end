@@ -44,8 +44,11 @@
 }
 
 .framed-component {
-    border: solid 1px black;
+    border: solid 1px var(--accent);
     border-radius: 1em;
+    padding: .5em;
+    margin: .2em;
+    width: 10em;
 }
 
 /* .card>button {

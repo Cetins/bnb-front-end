@@ -2,7 +2,7 @@ import React from "react";
 
 const Amenity = ({ amenity }) => {
     return (
-        <div>
+        <div className="framed-component">
             <p>{amenity.title}</p>
         </div>
     )

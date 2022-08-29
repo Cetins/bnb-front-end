@@ -3,8 +3,7 @@ import { useParams } from "react-router-dom";
 import PropertyService from "../services/PropertyService";
 import AmenityService from "../services/AmenityService";
 import Description from "./Description";
-import CheckInAfter from "./CheckInAfter";
-import CheckOutBefore from "./CheckOutBefore";
+import CheckTimes from "./check-in-out/CheckTimes";
 import ReviewList from "../reviews/ReviewList";
 import IconContainer from "../properties/preview-card/IconContainer";
 import AmenityList from "./amenities/AmenityList";
@@ -66,8 +65,7 @@ const Property = () => {
                 <FacilityList facilities={property.facilities} />
             </div>
             <div>
-                <CheckInAfter time={property.checkInAfter} /><br/>
-                <CheckOutBefore time={property.checkOutBefore} />
+                <CheckTimes property={property} />
             </div>
             {property.parkingOptions.length != 0 ? 
             <div>

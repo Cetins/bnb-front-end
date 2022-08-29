@@ -3,7 +3,7 @@ import React from "react";
 const Facility = ({ facility }) => {
 
     return (
-        <div>
+        <div className="framed-component">
             <span className="icon-container">
                 <span className="material-icons">{facility.iconUrl}</span>
                 <h3>{ facility.title }</h3>

@@ -7,6 +7,8 @@ const ReviewList = ({ reviews }) => {
 
     return (
         <div className="centered">
+            <h3>Reviews</h3>
+            <hr></hr>
             <ul className="cards">
                 {itemList}
             </ul>
