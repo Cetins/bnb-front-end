@@ -2,7 +2,7 @@ import React from "react";
 
 const Description = ({ text }) => {
 
-    return <p className="text-container">{text}</p>
+    return <p>{text}</p>
 }
 
 export default Description;
