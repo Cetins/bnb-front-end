@@ -11,43 +11,31 @@
   font-family: 'Nunito', sans-serif;
 }
 
-*,
-*::before,
-*::after { 
-  box-sizing: border-box;
-}
-
 .App {
+  display: grid;
   font-family: 'Roboto', sans-serif;
   text-align: center;
   line-height: 1.5em;
+  margin: 0;
 }
 
-h1 {
-  font-weight: 500;
-}
+h1 {font-weight: 500;}
 
-h2 {
-  font-weight: 400;
-}
+h2 {font-weight: 400;}
 
 h3 {
   font-weight: 400;
   font-size: 1.3em;
 }
 
-p {
-  font-weight: 300;
-}
+p {font-weight: 300;}
 
 a {
   color: var(--accent);
   font-weight: 300;
 }
 
-li {
-  font-weight: 300;
-}
+li {font-weight: 300;}
 
 .test {
   background-color: var(--test);
