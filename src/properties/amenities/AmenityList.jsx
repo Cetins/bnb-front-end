@@ -7,7 +7,6 @@ const AmenityList = ({ categories, amenities }) => {
         return <AmenityCategory category={category} amenities={amenities} />
     })
 
-    console.log(itemList);
     return (
         <ul>{ itemList }</ul>
     )
