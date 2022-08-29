@@ -6,9 +6,10 @@ import reportWebVitals from './reportWebVitals';
 import { Auth0Provider } from '@auth0/auth0-react';
 import "./static/styles/button.css";
 import "./static/styles/images.css";
-import "./static/styles/container.css"
-import "./static/styles/icons.css"
-import "./static/styles/review.css"
+import "./static/styles/container.css";
+import "./static/styles/icons.css";
+import "./static/styles/review.css";
+import "./static/styles/menu.css";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
