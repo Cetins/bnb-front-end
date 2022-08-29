@@ -11,9 +11,9 @@ const Home = () => {
     });
 
     return (
-        <>
+        <div className="parent-container">
             <PropertyList properties={properties} />
-        </>
+        </div>
     )
 }
 
