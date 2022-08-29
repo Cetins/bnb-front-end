@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from "react";
+import Profile from "../login/Profile"
 
 const Admin = () => {
 
     return (
         <div>
-            <h1>H1 Main Title</h1><br/>
+            <Profile />
+            {/* <h1>H1 Main Title</h1><br/>
             <h2>H2 Head Title</h2><br/>
             <h3>H3 Sub Title</h3><br/>
             <p>P Lorem ipsum dolor sit amet consectetur adipisicing elit</p><br/>
@@ -13,7 +15,7 @@ const Admin = () => {
                 <li>list item</li>
                 <li>list item</li>
                 <li>list item</li>
-            </ul>
+            </ul> */}
         </div>
     )
 }
