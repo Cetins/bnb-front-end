@@ -17,6 +17,7 @@ function App() {
 
   const [loggedUser, setLoggedUser] = useState(null);
 
+  useEffect(() => {},[loggedUser]);
   useEffect(() => {setLoggedUser()},[]);
 
   return (

@@ -3,7 +3,7 @@ import Review from "./Review";
 
 const ReviewList = ({ reviews }) => {
 
-    const itemList = reviews.map((review, index) => <Review review={review} />)
+    const itemList = reviews.map((review, index) => <Review review={review} key={review.id} />)
 
     return (
         <div className="centered">

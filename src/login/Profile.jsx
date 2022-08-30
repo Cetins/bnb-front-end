@@ -4,6 +4,7 @@ import LogComponent from "./LogComponent";
 import LogoutButton from "./LogoutButton";
 import GuestService from "../services/GuestService";
 import MyReviewList from "../account/MyReviewList";
+import MyBookingList from "../account/MyBookingList";
 
 const Profile = ({ loggedUser, setLoggedUser }) => {
   const { user, isAuthenticated, isLoading } = useAuth0();
@@ -11,9 +12,9 @@ const Profile = ({ loggedUser, setLoggedUser }) => {
   useEffect(() => {
     if (isAuthenticated) {
       GuestService.getGuestByEmail(user.email)
-    .then(res => setLoggedUser(res))
+      .then(res => setLoggedUser(res))
     }
-  }, [user])
+  }, [])
 
   useEffect(() => {},[loggedUser]);
 
@@ -29,6 +30,7 @@ const Profile = ({ loggedUser, setLoggedUser }) => {
         <p>{user.email}</p>
         <LogoutButton />
         {loggedUser ? <MyReviewList reviews={loggedUser.reviews} /> : null}
+        {loggedUser ? <MyBookingList bookings={loggedUser.bookings} /> : null}
       </div>
     )
   }

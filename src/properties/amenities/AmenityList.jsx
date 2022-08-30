@@ -3,8 +3,8 @@ import AmenityCategory from "./AmenityCategory";
 
 const AmenityList = ({ categories, amenities }) => {
 
-    const itemList = categories.map(category => {
-        return <AmenityCategory category={category} amenities={amenities} />
+    const itemList = categories.map((category, index) => {
+        return <AmenityCategory key={index} category={category} amenities={amenities} />
     })
 
     return (

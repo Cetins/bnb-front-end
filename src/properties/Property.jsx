@@ -11,8 +11,9 @@ import FacilityList from "./facilities/FacilityList";
 import ParkingOptions from "./parking/ParkingOptions";
 import PropertyRulesList from "./property_rules/PropertyRulesList";
 import NewBookingForm from "../booking/NewBookingForm";
+import BookingService from "../services/BookingService";
 
-const Property = () => {
+const Property = ({ loggedUser }) => {
 
     const {id} = useParams();
     const [property, setProperty] = useState(null);
@@ -35,6 +36,11 @@ const Property = () => {
         const uniqueCategories = [...new Set(categories)];
         setAmenityCategories(uniqueCategories);
     }, [amenities]);
+
+    const addBooking = ({booking}) => {
+        console.log(booking);
+        BookingService.addBooking(booking);
+    }
     
     if(!property) {
         return <p>Loading...</p>
@@ -47,7 +53,7 @@ const Property = () => {
             </div>
             <br/>
             <div>
-                <NewBookingForm />
+                <NewBookingForm property={property} addBooking={addBooking} loggedUser={loggedUser} />
             </div>
 
             <div>
