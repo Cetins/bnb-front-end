@@ -9,9 +9,8 @@ const AmenityCategory = ({ category, amenities }) => {
 
 
     return (
-        <div>
-            <h3>{ category }</h3>
-            <hr></hr>
+        <div className="card">
+            <h4>{ category }</h4>
             <ul>{ itemList }</ul>
         </div>
     )

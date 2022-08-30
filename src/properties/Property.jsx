@@ -40,7 +40,7 @@ const Property = () => {
     }
     
     return  (
-        <div>
+        <div className="property-listing">
             <div>
                 <IconContainer property={property} />
             </div>
@@ -61,18 +61,20 @@ const Property = () => {
             <div>
                 <AmenityList categories={amenityCategories} amenities={property.amenities} />
             </div>
-            <div>
-                <FacilityList facilities={property.facilities} />
-            </div>
-            <div>
-                <CheckTimes property={property} />
-            </div>
-            {property.parkingOptions.length != 0 ? 
-            <div>
-                <ParkingOptions parkingOptions={property.parkingOptions}/>
-            </div> : null}
-            <div>
-                <PropertyRulesList propertyRules={property.propertyRules} />
+            <div className="cards">
+                <div className="card">
+                    <FacilityList facilities={property.facilities} />
+                </div>
+                <div className="card">
+                    <CheckTimes property={property} />
+                </div>
+                {property.parkingOptions.length != 0 ? 
+                <div className="card">
+                    <ParkingOptions parkingOptions={property.parkingOptions}/>
+                </div> : null}
+                <div className="card">
+                    <PropertyRulesList propertyRules={property.propertyRules} />
+                </div>
             </div>
             <div>
                 <ReviewList  reviews={property.reviews}/>

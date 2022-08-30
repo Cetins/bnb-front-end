@@ -2,9 +2,9 @@ import React from "react";
 
 const Amenity = ({ amenity }) => {
     return (
-        <div className="framed-component">
+        <li className="custom-li">
             <p>{amenity.title}</p>
-        </div>
+        </li>
     )
 }
 

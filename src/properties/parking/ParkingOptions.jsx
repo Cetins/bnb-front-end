@@ -10,7 +10,6 @@ const ParkingOptions = ({ parkingOptions }) => {
                 <span className="material-icons">local_parking</span>
                 <h3>Parking</h3>
             </span>
-            <hr></hr>
             <ul>{ itemList }</ul>
         </div>
     )

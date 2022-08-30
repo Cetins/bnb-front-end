@@ -2,10 +2,10 @@ import React from "react";
 
 const CheckOutBefore = ({ time }) => {
     return (
-        <div className="framed-component">
+        <div>
             <span className="icon-container">
                 <span className="material-icons">schedule</span>
-                <h3>Check-out before { time }</h3>
+                <p>Check-out before { time }</p>
             </span>
         </div>
     )
