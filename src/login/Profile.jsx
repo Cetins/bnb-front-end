@@ -1,11 +1,21 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useAuth0 } from "@auth0/auth0-react";
 import LogComponent from "./LogComponent";
 import LogoutButton from "./LogoutButton";
-import LoginButton from "./LoginButton";
+import GuestService from "../services/GuestService";
+import MyReviewList from "../account/MyReviewList";
 
-const Profile = () => {
+const Profile = ({ loggedUser, setLoggedUser }) => {
   const { user, isAuthenticated, isLoading } = useAuth0();
+
+  useEffect(() => {
+    if (isAuthenticated) {
+      GuestService.getGuestByEmail(user.email)
+    .then(res => setLoggedUser(res))
+    }
+  }, [user])
+
+  useEffect(() => {},[loggedUser]);
 
   if (isLoading) {
     return <div>Loading ...</div>;
@@ -18,6 +28,7 @@ const Profile = () => {
         <h3>{user.name}</h3>
         <p>{user.email}</p>
         <LogoutButton />
+        {loggedUser ? <MyReviewList reviews={loggedUser.reviews} /> : null}
       </div>
     )
   }

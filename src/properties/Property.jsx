@@ -10,6 +10,7 @@ import AmenityList from "./amenities/AmenityList";
 import FacilityList from "./facilities/FacilityList";
 import ParkingOptions from "./parking/ParkingOptions";
 import PropertyRulesList from "./property_rules/PropertyRulesList";
+import NewBookingForm from "../booking/NewBookingForm";
 
 const Property = () => {
 
@@ -45,6 +46,9 @@ const Property = () => {
                 <IconContainer property={property} />
             </div>
             <br/>
+            <div>
+                <NewBookingForm />
+            </div>
 
             <div>
                 <img className="cover-img" src={require('../static/images/property/' + property.coverImage + '.jpg')} />
