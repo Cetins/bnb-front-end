@@ -26,8 +26,12 @@ function App() {
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/admin' element={<Admin />} />
-          <Route path='/property/:id' element={<Property loggedUser={loggedUser} />} />
-          <Route path='/account' element={<Profile setLoggedUser={setLoggedUser} loggedUser={loggedUser} />} />
+          <Route path='/property/:id' 
+            element={<Property loggedUser={loggedUser} />} />
+          <Route path='/account' 
+            element={<Profile 
+              setLoggedUser={setLoggedUser} 
+              loggedUser={loggedUser} />} />
         </Routes>
         {/* <Footer /> */}
       </Router>
