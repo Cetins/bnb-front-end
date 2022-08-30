@@ -1,21 +1,21 @@
 import React, { useEffect, useState } from "react";
-import GuestService from "../services/GuestService"
-import GuestList from "./GuestList";
+import Profile from "../login/Profile"
 
 const Admin = () => {
-    const [guests, setGuests] = useState([]);
-    
-
-    useEffect(() => {
-        GuestService.getGuests()
-        .then(guests => setGuests(guests));
-    });
 
     return (
         <div>
-            <p>admin</p>
-            {/* <img src={require("../images/spacejoy-YI2YkyaREHk-unsplash.jpg")} alt="propertyphoto" /> */}
-            <GuestList guests={guests} />
+            <Profile />
+            {/* <h1>H1 Main Title</h1><br/>
+            <h2>H2 Head Title</h2><br/>
+            <h3>H3 Sub Title</h3><br/>
+            <p>P Lorem ipsum dolor sit amet consectetur adipisicing elit</p><br/>
+            <a href="https://codeclan.com/">A link style</a>
+            <ul>
+                <li>list item</li>
+                <li>list item</li>
+                <li>list item</li>
+            </ul> */}
         </div>
     )
 }

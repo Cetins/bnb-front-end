@@ -1,0 +1,23 @@
+.material-icons {
+    font-family: 'Material Icons';
+    font-size: 1.2em;
+}
+
+.icon-container {
+    display: inline-flex;
+    justify-items: center;
+    align-items: center;
+}
+
+.icon {
+    height: 1.3em;
+}
+
+.favorite-button {
+    max-width: 30px;
+    max-height: 30px;
+    position: relative;
+    left: -10%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}

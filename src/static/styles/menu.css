@@ -1,0 +1,25 @@
+.navbar {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    /* box-shadow: 0 1px 8px rgb(0, 0, 0);; */
+    margin: 1em;
+}
+
+.navbar>img {
+    margin-right: auto;
+}
+
+.nav-links {
+    display: flex;
+}
+
+.nav-item {
+    margin: .5em;
+    list-style: none;
+}
+
+.nav-item>a {
+    text-decoration: none;
+    color: black;
+}

@@ -1,20 +1,15 @@
-const baseURL = 'http://localhost:8080/api/properties/'
+const baseURL = 'http://localhost:8080/api/amenities'
 
-const PropertyService = {
-    getProperties() {
+const AmenityService = {
+    getAmenities() {
         return fetch(baseURL)
             .then(res => res.json());
     },
 
-    findProperty(id) {
-      return fetch(baseURL + id)
-          .then(res => res.json());
-    },
-
-    updateProperty(property) {
-        return fetch(baseURL + property.id, {
+    updateAmenity(amenity) {
+        return fetch(baseURL + amenity.id, {
             method: 'PUT',
-            body: JSON.stringify(property),
+            body: JSON.stringify(amenity),
             headers: {
                 'Content-Type': 'application/json'
             }
@@ -22,10 +17,10 @@ const PropertyService = {
             .then(res => res.json());
     },
 
-    addProperty(property) {
+    addAmenity(amenity) {
         return fetch(baseURL, {
           method: 'POST',
-          body: JSON.stringify(property),
+          body: JSON.stringify(amenity),
           headers: {
             'Content-Type': 'application/json'
           }
@@ -33,11 +28,11 @@ const PropertyService = {
           .then(res => res.json());
     },
 
-    deleteProperty(id) {
+    deleteAmenity(id) {
         return fetch(baseURL + id, {
           method: 'DELETE'
         });
     }
 }
 
-export default PropertyService;
+export default AmenityService;

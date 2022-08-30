@@ -1,0 +1,93 @@
+/* For page itself */
+.parent-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* For containers in the page */
+.child-container {
+    background-color: var(--container);
+    box-shadow: var(--shadow);
+    margin: 1em;
+    padding: 1em;
+}
+
+/* For listings in the search or similar card base displays */
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style: none;
+}
+
+.card {
+    flex: 0 1 15em;
+    margin: .5em;
+}
+
+.card>div {
+    text-align: left;
+}
+
+.rating-span {
+    display: flex;
+    justify-content: space-between;
+}
+
+.icon-container {
+    display: flex;
+}
+
+.icon-container:last-child {
+    margin-left: auto;
+}
+
+.amenities {
+    display: flex;
+    flex-wrap: wrap;
+    min-width: fit-content;
+}
+
+.property-listing {
+    display: grid;
+    justify-self: center;
+    justify-items: center;
+    max-width: 100vh;
+    min-width: 90vh;
+}
+
+.property-listing>div {
+    margin: .5em;
+}
+
+.log-parent {
+    border: 1px solid red;
+    height: 100vh;
+    width: 100vh;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+}
+
+.log-child {
+    border: solid 1px blue;
+    height: 40vh;
+    width: 50vh;
+}
+
+/* .card>button {
+    position: relative;
+    left: 50%;
+    bottom: -4%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+} */
+
+/* button {
+    border: none;
+    border-radius: .5em;
+    background-color: black;
+    color: white;
+    padding: 1em;
+} */

@@ -1,0 +1,16 @@
+.review-img {
+    border-radius: 1em;
+    width: 20em;
+    height: 20em;
+    object-fit: cover;
+}
+
+.cover-img {
+    width: 50em;
+    height: 30em;
+    border-radius: 1em;
+}
+
+.logo {
+    height: 3em;
+}

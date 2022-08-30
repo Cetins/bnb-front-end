@@ -1,42 +1,46 @@
 :root {
-  --accent: #3DB2FF;
+  --accent: #D83A56;
   --success: rgb(0, 147, 0);
   --fail: rgb(253, 35, 35);
   --shadow: 0 1px 8px rgb(0, 0, 0);
-  --test: rgba(0, 128, 0, 0.362);
+  --test: rgba(0, 96, 128, 0.362);
 }
-
 * {
   margin: 0;
   padding: 0;
+  font-family: 'Nunito', sans-serif;
 }
 
 .App {
+  display: grid;
   font-family: 'Roboto', sans-serif;
   text-align: center;
+  line-height: 1.5em;
+  margin: 0;
 }
 
-h1 {
-  font-weight: 900;
+h1 {font-weight: 500;}
+
+h2 {font-weight: 400;}
+
+h3 {
+  font-weight: 400;
+  font-size: 1.3em;
 }
 
-h2 {
-  font-weight: 500;
-}
-
-p {
-  font-weight: 300;
-}
+p {font-weight: 300;}
 
 a {
-  text-decoration: none;
-  color: black;
+  color: var(--accent);
   font-weight: 300;
 }
 
-li {
-  list-style: none;
+.custom-li {
+  font-weight: 300;
+  text-align: left;
 }
+
+.custom-li::marker {color: var(--accent);}
 
 .test {
   background-color: var(--test);
