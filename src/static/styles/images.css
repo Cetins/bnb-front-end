@@ -14,3 +14,7 @@
 .logo {
     height: 3em;
 }
+
+.profile-img {
+    border-radius: 50%;
+}

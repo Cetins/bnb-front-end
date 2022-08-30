@@ -5,10 +5,10 @@ import LogoutButton from "./LogoutButton";
 const LogComponent = () => {
 
     return (
-        <div className="parent-container">
-            <div className="log-child">
+        <div className="log-child">
+            <h3>Please login to continue to your account</h3>
+            <div>
                 <LoginButton />
-                <LogoutButton />
             </div>
         </div>
     )

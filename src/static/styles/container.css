@@ -71,7 +71,9 @@
 }
 
 .log-child {
-    border: solid 1px blue;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3em;
     height: 40vh;
     width: 50vh;
 }
