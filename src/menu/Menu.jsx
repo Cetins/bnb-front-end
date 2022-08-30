@@ -4,9 +4,10 @@ import { Link } from "react-router-dom"
 const Menu = () => {
     return (
         <nav className="navbar">
-            <img className="logo" src={require("../static/images/logo.png")} />
+            <Link to="/">
+                <img className="logo" src={require("../static/images/logo.png")} />
+            </Link>           
             <ul className="nav-links">
-                <li className="nav-item"><Link to="/"> Home </Link></li>
                 <li className='nav-item'><Link to="/admin"> Admin </Link></li>
                 <li className="nav-item">
                     <Link to="/account">
