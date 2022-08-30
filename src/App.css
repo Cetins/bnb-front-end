@@ -1,5 +1,5 @@
 :root {
-  --accent: #3DB2FF;
+  --accent: #D83A56;
   --success: rgb(0, 147, 0);
   --fail: rgb(253, 35, 35);
   --shadow: 0 1px 8px rgb(0, 0, 0);
@@ -35,7 +35,12 @@ a {
   font-weight: 300;
 }
 
-li {font-weight: 300;}
+.custom-li {
+  font-weight: 300;
+  text-align: left;
+}
+
+.custom-li::marker {color: var(--accent);}
 
 .test {
   background-color: var(--test);
