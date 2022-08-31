@@ -10,7 +10,7 @@ const AmenityList = ({ categories, amenities }) => {
     return (
         <div>
             <h3>Amenities</h3>
-            <div className="amenities">
+            <div className="row-wrap">
                 { itemList }
             </div>
         </div>

@@ -6,7 +6,7 @@ const PropertyRulesList = ({ propertyRules }) => {
 
     return (
         <div>
-            <h3>Rules</h3>
+            <h4 className="text-align-center">Rules</h4>
             <ul>{ listItems }</ul>
         </div>
     )

@@ -3,12 +3,10 @@ import React from "react";
 const Facility = ({ facility }) => {
 
     return (
-        <div>
-            <span className="icon-container">
+            <span className="row-wrap margin5">
                 <span className="material-icons">{facility.iconUrl}</span>
-                <p>{ facility.title }</p>
+                {facility.isShared ? <p>Shared {facility.title}</p> : <p>Private {facility.title}</p>}
             </span>
-        </div>
     )
 }
 

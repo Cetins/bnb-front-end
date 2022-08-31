@@ -2,7 +2,7 @@ import React from "react";
 
 const Description = ({ text }) => {
 
-    return <p>{text}</p>
+    return <p className="text-align-left">{text}</p>
 }
 
 export default Description;

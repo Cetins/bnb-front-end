@@ -11,25 +11,31 @@ const NewBookingForm = ({ property, addBooking, loggedUser }) => {
     const handlePeopleChange = (e) => setPeople(e.target.value);
 
     const handleBookingSubmit = (e) => {
-        addBooking({loggedUser, property, date, nights, people});
+        e.preventDefault();
+        addBooking({
+            guestId: loggedUser.id, 
+            propertyId: property.id, 
+            date: date, 
+            nights: parseInt(nights), 
+            people: parseInt(people)});
     }
 
     return (
         <div>
-            <form>
-                <div>
-                    <label>Check-in date: </label>
-                    <input type="date" onChange={handleDateChange}/>
+            <form className="row-wrap form" onSubmit={handleBookingSubmit}>
+                <div className="form-items">
+                    <label className="label">Check-in: </label>
+                    <input className="calendar input" type="date" onChange={handleDateChange}/>
                 </div>
-                <div>
-                    <label>Nights: </label>
-                    <input type="number" onChange={handleNightsChange} />
+                <div className="form-items">
+                    <label className="label">Nights: </label>
+                    <input className="input" type="number" onChange={handleNightsChange} />
                 </div>
-                <div>
-                    <label>People: </label>
-                    <input type="number" onChange={handlePeopleChange} />
+                <div className="form-items">
+                    <label className="label">People: </label>
+                    <input className="input" type="number" onChange={handlePeopleChange} />
                 </div>
-                <input type="submit" onSubmit={handleBookingSubmit} value="Book now" />
+                <input className="button" type="submit"  value="Book now" />
             </form>
         </div>
     )

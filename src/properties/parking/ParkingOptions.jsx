@@ -6,10 +6,7 @@ const ParkingOptions = ({ parkingOptions }) => {
 
     return (
         <div>
-            <span className="icon-container">
-                <span className="material-icons">local_parking</span>
-                <h3>Parking</h3>
-            </span>
+            <h4 className="text-align-center">Parking</h4>
             <ul>{ itemList }</ul>
         </div>
     )

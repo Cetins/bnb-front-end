@@ -1,6 +1,8 @@
 .material-icons {
     font-family: 'Material Icons';
-    font-size: 1.2em;
+    font-size: 16px;
+    margin: 0;
+    line-height: 30px;
 }
 
 .icon-container {
@@ -10,7 +12,7 @@
 }
 
 .icon {
-    height: 1.3em;
+    height: 1em;
 }
 
 .favorite-button {

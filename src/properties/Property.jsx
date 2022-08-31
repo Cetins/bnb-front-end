@@ -27,8 +27,8 @@ const Property = ({ loggedUser }) => {
     }, []);
 
     useEffect(() => {
-        AmenityService.getAmenities()
-        .then(amenities => setAmenities(amenities));
+        PropertyService.findProperty(id)
+        .then(property => setAmenities(property.amenities));
     }, []);
 
     useEffect(() => {
@@ -38,7 +38,7 @@ const Property = ({ loggedUser }) => {
         setAmenityCategories(uniqueCategories);
     }, [amenities]);
 
-    const addBooking = ({booking}) => {
+    const addBooking = (booking) => {
         console.log(booking);
         BookingService.addBooking(booking);
     }
@@ -53,12 +53,12 @@ const Property = ({ loggedUser }) => {
                 <IconContainer property={property} />
             </div>
             <br/>
-            <div>
+            <div className="align-center">
                 <NewBookingForm property={property} addBooking={addBooking} loggedUser={loggedUser} />
             </div>
 
             <div>
-                <Gallery imageUrls={property.imageUrls} />
+                <Gallery property={property} imageUrls={property.imageUrls} />
             </div>
 
             <div>
@@ -68,24 +68,30 @@ const Property = ({ loggedUser }) => {
             <div>
                 <Description text={property.description} />
             </div>
+
             <div>
                 <AmenityList categories={amenityCategories} amenities={property.amenities} />
             </div>
-            <div className="wrap-main">
-                <div className="wrap-item">
+
+            <div className="row-wrap">
+                <div className="card padding1">
                     <FacilityList facilities={property.facilities} />
                 </div>
-                <div className="wrap-item">
+
+                <div className="card padding1">
                     <CheckTimes property={property} />
                 </div>
-                {property.parkingOptions.length != 0 ? 
-                <div className="wrap-item">
-                    <ParkingOptions parkingOptions={property.parkingOptions}/>
-                </div> : null}
-                <div className="wrap-item">
+
+                <div className="card padding1">
                     <PropertyRulesList propertyRules={property.propertyRules} />
                 </div>
+
+                {property.parkingOptions.length != 0 ? 
+                <div className="card padding1">
+                    <ParkingOptions parkingOptions={property.parkingOptions}/>
+                </div> : null}
             </div>
+            
             <div>
                 <ReviewList  reviews={property.reviews}/>
             </div>

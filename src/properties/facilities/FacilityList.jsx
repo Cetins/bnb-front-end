@@ -6,7 +6,7 @@ const FacilityList = ({ facilities }) => {
 
     return (
         <div>
-            <h3>Facilities</h3>
+            <h4 className="text-align-center">Facilities</h4>
             <ul>{ itemList }</ul>
         </div>
     )

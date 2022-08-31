@@ -19,23 +19,9 @@
     border-radius: 50%;
 }
 
-.gallery-div-row {
-    display: flex;
-    flex-flow: row wrap;
-    flex-wrap: wrap;
-    flex-direction: row;
-}
-
-.gallery-div-column {
-    display: flex;
-    flex-flow: column wrap;
-    flex-wrap: wrap;
-    flex-direction: column;
-}
-
 .gallery-img-1 {
     width: 30em;
-    height: 30em;
+    height: 30.4em;
     border-top-left-radius: 1em;
     border-bottom-left-radius: 1em;
     object-fit: cover;
@@ -53,4 +39,12 @@
     width: 10em;
     height: 15em;
     object-fit: cover;
+}
+
+.gallery-img-1, .gallery-img-2, .gallery-img-3, .gallery-img-4, .gallery-img-5 {
+    margin: .2em;
+}
+
+.img-gallery-page {
+    width: 80vw;
 }

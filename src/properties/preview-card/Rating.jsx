@@ -5,7 +5,7 @@ const Rating = ({ rating }) => {
     return (
         <span className="icon-container">
             <span className="material-icons">star</span>
-            <h3> {rating}</h3>
+            <h4> {rating}</h4>
         </span>
     )
 

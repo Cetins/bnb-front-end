@@ -9,7 +9,7 @@ const AmenityCategory = ({ category, amenities }) => {
 
 
     return (
-        <div className="card">
+        <div className="card padding1">
             <h4>{ category }</h4>
             <ul>{ itemList }</ul>
         </div>

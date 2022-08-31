@@ -1,13 +1,23 @@
 import React from "react";
-import CheckInAfter from "./CheckInAfter";
-import CheckOutBefore from "./CheckOutBefore";
 
 const CheckTimes = ({ property }) => {
     return (
-        <div>
-            <h3>Check in/out</h3>
-            <CheckInAfter time={property.checkInAfter} /><br/>
-            <CheckOutBefore time={property.checkOutBefore} />
+        <div className="column-wrap align-left">
+            <h4 className="text-align-center">Check in/out</h4>
+            <ul>
+                <li className="no-style">
+                    <span className="row-wrap margin5">
+                        <span className="material-icons">schedule</span>
+                        <p>Check-in after { property.checkInAfter }</p>
+                    </span>
+                </li>
+                <li className="no-style">
+                    <span className="row-wrap margin5">
+                        <span className="material-icons">schedule</span>
+                        <p>Check-out before { property.checkOutBefore }</p>
+                    </span>
+                </li>
+            </ul>
         </div>
     )
 }
