@@ -14,13 +14,21 @@ const Profile = ({ loggedUser }) => {
 
   if (isAuthenticated) {
     return (
-      <div>
-        <img className="profile-img" src={user.picture} alt={user.name} />
-        <h3>{user.name}</h3>
-        <p>{user.email}</p>
-        <LogoutButton />
-        {loggedUser ? <MyReviewList reviews={loggedUser.reviews} /> : null}
-        {loggedUser ? <MyBookingList bookings={loggedUser.bookings} /> : null}
+      <div className="row-wrap padding1">
+        <div>
+          <img className="profile-img" src={user.picture} alt={user.name} />
+        </div>
+        <div className="column-wrap align-left padding1 align-center">
+          <h3>{user.name}</h3>
+            <p>{user.email}</p>
+        </div>
+        <div className="align-center">
+          <LogoutButton />            
+        </div>
+        <div>
+          {loggedUser ? <MyReviewList reviews={loggedUser.reviews} /> : null}
+          {loggedUser ? <MyBookingList bookings={loggedUser.bookings} /> : null}
+        </div>
       </div>
     )
   }

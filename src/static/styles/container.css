@@ -28,6 +28,7 @@
 }
 
 .align-center {
+    display: flex;
     align-items: center;
 }
 
@@ -35,8 +36,12 @@
     padding: 1em;
 }
 
-.card>div {
-    text-align: left;
+.card {
+    display: block;
+    box-shadow: var(--shadow);
+    border-radius: 1em;
+    margin: .2em;
+    min-width: 12em;
 }
 
 .rating-span {

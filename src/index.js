@@ -11,7 +11,9 @@ import "./static/styles/container.css";
 import "./static/styles/icons.css";
 import "./static/styles/review.css";
 import "./static/styles/menu.css";
-import "./static/styles/form.css"
+import "./static/styles/form.css";
+import "./static/styles/profile.css";
+
 
 const providerConfig = {
   domain: configData.domain,

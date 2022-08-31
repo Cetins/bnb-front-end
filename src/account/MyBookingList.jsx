@@ -6,11 +6,12 @@ const MyBookingList = ({ bookings }) => {
 
     return (
         <div>
-            <h3>My Bookings</h3>
-            <hr></hr>
+            <h3>  My Bookings</h3>
+            <br></br>
             <ul className="row-wrap">
                 {listItems}
             </ul>
+            <br></br>
         </div>
     )
 }

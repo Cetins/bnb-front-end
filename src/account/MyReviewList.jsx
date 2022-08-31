@@ -8,10 +8,11 @@ const MyReviewList = ({ reviews }) => {
     return (
         <div>
             <h3>My Reviews</h3>
-            <hr></hr>
+            <br></br>
             <ul className="row-wrap">
                 {itemList}
             </ul>
+            <br></br>
         </div>
     )
     
