@@ -6,10 +6,10 @@ const MyReviewList = ({ reviews }) => {
     const itemList = reviews.map((review) => <MyReview review={review} key={review.id}/>)
 
     return (
-        <div className="centered">
+        <div>
             <h3>My Reviews</h3>
             <hr></hr>
-            <ul className="cards">
+            <ul className="row-wrap">
                 {itemList}
             </ul>
         </div>

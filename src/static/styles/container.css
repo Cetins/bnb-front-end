@@ -24,6 +24,7 @@
 
 .align-left{
     justify-items: left;
+    text-align: left;
 }
 
 .align-center {
