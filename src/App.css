@@ -15,7 +15,7 @@
   display: grid;
   font-family: 'Roboto', sans-serif;
   text-align: center;
-  line-height: 1.5em;
+  line-height: 30px;
   margin: 0;
 }
 
@@ -28,12 +28,27 @@ h3 {
   font-size: 1.3em;
 }
 
+h4 {
+  text-align: left;
+}
+
 p {font-weight: 300;}
 
 a {
   color: var(--accent);
   font-weight: 300;
 }
+
+ul {margin: 0; padding: 0;}
+
+.no-style{list-style: none;}
+
+.text-align-left {
+  text-align: left;
+  width: inherit;
+}
+
+.text-align-center {text-align: center;}
 
 .custom-li {
   font-weight: 300;
