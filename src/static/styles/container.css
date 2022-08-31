@@ -37,6 +37,7 @@
 
 .icon-container {
     display: flex;
+    margin: .3em;
 }
 
 .icon-container:last-child {
@@ -54,17 +55,19 @@
     justify-self: center;
     justify-items: center;
     max-width: 100vh;
-    min-width: 90vh;
+    min-width: 90vw;
 }
 
 .property-listing>div {
     margin: .5em;
+    max-width: 100vh;
+    min-width: 90vw;
 }
 
 .log-parent {
     border: 1px solid red;
     height: 100vh;
-    width: 100vh;
+    width: 100vw;
     display: flex;
     justify-items: center;
     align-items: center;
@@ -75,21 +78,26 @@
     margin-right: auto;
     margin-top: 3em;
     height: 40vh;
-    width: 50vh;
+    width: 50vw;
 }
 
-/* .card>button {
-    position: relative;
-    left: 50%;
-    bottom: -4%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-} */
+.line-icon-right {
+    text-align: left;
+    display: flex;
+    align-items: center;
+    margin: auto;
+}
 
-/* button {
-    border: none;
-    border-radius: .5em;
-    background-color: black;
-    color: white;
-    padding: 1em;
-} */
+.title-container {
+    border: 1px red solid;
+    display: flex;
+    align-items: center;
+}
+
+.wrap-main {
+    display: flex;
+}
+
+.wrap-item {
+    display: flex;
+}

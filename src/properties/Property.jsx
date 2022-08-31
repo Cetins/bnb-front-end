@@ -12,6 +12,7 @@ import ParkingOptions from "./parking/ParkingOptions";
 import PropertyRulesList from "./property_rules/PropertyRulesList";
 import NewBookingForm from "../booking/NewBookingForm";
 import BookingService from "../services/BookingService";
+import Gallery from "../gallery/Gallery";
 
 const Property = ({ loggedUser }) => {
 
@@ -57,8 +58,7 @@ const Property = ({ loggedUser }) => {
             </div>
 
             <div>
-                <img className="cover-img" src={require('../static/images/property/' + property.coverImage + '.jpg')} />
-                <br/>
+                <Gallery imageUrls={property.imageUrls} />
             </div>
 
             <div>
@@ -71,18 +71,18 @@ const Property = ({ loggedUser }) => {
             <div>
                 <AmenityList categories={amenityCategories} amenities={property.amenities} />
             </div>
-            <div className="cards">
-                <div className="card">
+            <div className="wrap-main">
+                <div className="wrap-item">
                     <FacilityList facilities={property.facilities} />
                 </div>
-                <div className="card">
+                <div className="wrap-item">
                     <CheckTimes property={property} />
                 </div>
                 {property.parkingOptions.length != 0 ? 
-                <div className="card">
+                <div className="wrap-item">
                     <ParkingOptions parkingOptions={property.parkingOptions}/>
                 </div> : null}
-                <div className="card">
+                <div className="wrap-item">
                     <PropertyRulesList propertyRules={property.propertyRules} />
                 </div>
             </div>
