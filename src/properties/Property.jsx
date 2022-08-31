@@ -74,20 +74,20 @@ const Property = ({ loggedUser }) => {
             </div>
 
             <div className="row-wrap">
-                <div className="card padding1">
+                <div className="padding1">
                     <FacilityList facilities={property.facilities} />
                 </div>
 
-                <div className="card padding1">
+                <div className="padding1">
                     <CheckTimes property={property} />
                 </div>
 
-                <div className="card padding1">
+                <div className="padding1">
                     <PropertyRulesList propertyRules={property.propertyRules} />
                 </div>
 
                 {property.parkingOptions.length != 0 ? 
-                <div className="card padding1">
+                <div className="padding1">
                     <ParkingOptions parkingOptions={property.parkingOptions}/>
                 </div> : null}
             </div>
