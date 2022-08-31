@@ -9,7 +9,7 @@ const ReviewList = ({ reviews }) => {
         <div className="centered">
             <h3>Reviews</h3>
             <hr></hr>
-            <ul className="cards">
+            <ul className="review-list">
                 {itemList}
             </ul>
         </div>
