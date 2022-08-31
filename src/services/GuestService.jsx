@@ -1,4 +1,4 @@
-const baseURL = 'http://localhost:8080/api/guests'
+const baseURL = 'http://localhost:8080/api/public/guests'
 
 const GuestService = {
   getGuests() {

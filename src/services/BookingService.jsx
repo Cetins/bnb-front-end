@@ -1,4 +1,4 @@
-const baseURL = 'http://localhost:8080/api/bookings/'
+const baseURL = 'http://localhost:8080/api/public/bookings/'
 
 const BookingService = {
     getProperties() {
@@ -23,6 +23,7 @@ const BookingService = {
     },
 
     addBooking(booking) {
+      console.log(booking)
         return fetch(baseURL, {
           method: 'POST',
           body: JSON.stringify(booking),

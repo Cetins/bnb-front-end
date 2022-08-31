@@ -1,4 +1,4 @@
-const baseURL = 'http://localhost:8080/api/properties/'
+const baseURL = 'http://localhost:8080/api/public/properties/'
 
 const PropertyService = {
     getProperties() {

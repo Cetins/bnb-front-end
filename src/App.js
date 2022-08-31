@@ -6,7 +6,9 @@ import './App.css';
 import Admin from './admin/Admin';
 import Property from './properties/Property';
 import Profile from './login/Profile';
-
+import PropertyGallery from './gallery/PropertyGallery';
+import { useAuth0 } from '@auth0/auth0-react';
+import GuestService from "./services/GuestService"
 
 const PrivateRoute = () => {
   const auth = null;
@@ -14,16 +16,20 @@ const PrivateRoute = () => {
 }
 
 function App() {
-
+  const { user, isLoading, isAuthenticated } = useAuth0();
   const [loggedUser, setLoggedUser] = useState(null);
 
-  useEffect(() => {},[loggedUser]);
-  useEffect(() => {setLoggedUser()},[]);
+  useEffect(() => {
+    if (isAuthenticated) {
+      GuestService.getGuestByEmail(user.email)
+      .then(res => setLoggedUser(res))
+    }
+  }, [isAuthenticated])
 
   return (
     <div className="App">
       <Router>
-        <Menu />
+        <Menu loggedUser={loggedUser} />
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/admin' element={<Admin />} />
@@ -33,6 +39,8 @@ function App() {
             element={<Profile 
               setLoggedUser={setLoggedUser} 
               loggedUser={loggedUser} />} />
+          <Route path='/property/gallery/:id' 
+            element={<PropertyGallery />} />
         </Routes>
         {/* <Footer /> */}
       </Router>
