@@ -12,7 +12,7 @@ const Gallery = ({ property, imageUrls }) => {
 
     return (
         <Link to={url} >
-            <div className="row-wrap">
+            <div className="row-wrap padding1">
                 <img className="gallery-img-1" src={require('../static/images/property/' + url_1 + '.jpg')} />
                 <div className="row-wrap">
                     <div className="column-wrap">

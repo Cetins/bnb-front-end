@@ -48,11 +48,16 @@ ul {margin: 0; padding: 0;}
   width: inherit;
 }
 
-.text-align-center {text-align: center;}
+.text-align-center {text-align: center; margin: 1em;}
 
 .custom-li {
   font-weight: 300;
   text-align: left;
+}
+
+.white-link {
+  color: white;
+  text-decoration: none;
 }
 
 .custom-li::marker {color: var(--accent);}
@@ -60,4 +65,11 @@ ul {margin: 0; padding: 0;}
 .test {
   background-color: var(--test);
   border: solid .5px red;
+}
+
+hr {
+  border: 0;
+  height: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }

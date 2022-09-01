@@ -17,10 +17,11 @@
 
 .profile-img {
     border-radius: 50%;
+    height: 5em;
 }
 
 .gallery-img-1 {
-    width: 30em;
+    width: 35em;
     height: 30.4em;
     border-top-left-radius: 1em;
     border-bottom-left-radius: 1em;
@@ -36,7 +37,7 @@
 }
 
 .gallery-img-2, .gallery-img-3, .gallery-img-4, .gallery-img-5 {
-    width: 10em;
+    width: 15em;
     height: 15em;
     object-fit: cover;
 }

@@ -18,24 +18,29 @@ const NewBookingForm = ({ property, addBooking, loggedUser }) => {
             date: date, 
             nights: parseInt(nights), 
             people: parseInt(people)});
+        setDate("");
+        setNights("");
+        setPeople("");
     }
 
     return (
-        <div>
-            <form className="row-wrap form" onSubmit={handleBookingSubmit}>
-                <div className="form-items">
+        <div className="box shadow">
+            <form className="column-wrap form" onSubmit={handleBookingSubmit}>
+                <div className="form-items column-wrap">
                     <label className="label">Check-in: </label>
                     <input className="calendar input" type="date" onChange={handleDateChange}/>
                 </div>
-                <div className="form-items">
+                <div className="form-items column-wrap">
                     <label className="label">Nights: </label>
                     <input className="input" type="number" onChange={handleNightsChange} />
                 </div>
-                <div className="form-items">
+                <div className="form-items column-wrap">
                     <label className="label">People: </label>
                     <input className="input" type="number" onChange={handlePeopleChange} />
                 </div>
-                <input className="button" type="submit"  value="Book now" />
+                <div>
+                    <input className="button" type="submit"  value="Book now" />
+                </div>
             </form>
         </div>
     )

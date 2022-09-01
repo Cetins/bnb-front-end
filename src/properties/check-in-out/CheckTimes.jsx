@@ -2,20 +2,14 @@ import React from "react";
 
 const CheckTimes = ({ property }) => {
     return (
-        <div className="column-wrap align-left">
-            <h4 className="text-align-center">Check in/out</h4>
+        <div className="card padding1">
+            <h4 className="text-align-left">Check in/out</h4>
             <ul>
-                <li className="no-style">
-                    <span className="row-wrap margin5">
-                        <span className="material-icons">schedule</span>
-                        <p>Check-in after { property.checkInAfter }</p>
-                    </span>
+                <li className="custom-li">
+                    <p>Check-in after { property.checkInAfter }</p>
                 </li>
-                <li className="no-style">
-                    <span className="row-wrap margin5">
-                        <span className="material-icons">schedule</span>
-                        <p>Check-out before { property.checkOutBefore }</p>
-                    </span>
+                <li className="custom-li">
+                    <p>Check-out before { property.checkOutBefore }</p>
                 </li>
             </ul>
         </div>

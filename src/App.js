@@ -9,6 +9,7 @@ import Profile from './login/Profile';
 import PropertyGallery from './gallery/PropertyGallery';
 import { useAuth0 } from '@auth0/auth0-react';
 import GuestService from "./services/GuestService"
+import UpdateReview from './account/UpdateReview';
 
 const PrivateRoute = () => {
   const auth = null;
@@ -41,6 +42,8 @@ function App() {
               loggedUser={loggedUser} />} />
           <Route path='/property/gallery/:id' 
             element={<PropertyGallery />} />
+          <Route path='/review/edit/:id' 
+          element={<UpdateReview loggedUser={loggedUser} setLoggedUser={setLoggedUser} />} />
         </Routes>
         {/* <Footer /> */}
       </Router>

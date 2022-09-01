@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import PropertyService from "../services/PropertyService";
-import AmenityService from "../services/AmenityService";
 import Description from "./Description";
 import CheckTimes from "./check-in-out/CheckTimes";
 import ReviewList from "../reviews/ReviewList";
@@ -48,52 +47,55 @@ const Property = ({ loggedUser }) => {
     }
     
     return  (
-        <div className="property-listing">
+        <div className="column-wrap center">
             <div>
                 <IconContainer property={property} />
             </div>
             <br/>
-            <div className="align-center">
-                <NewBookingForm property={property} addBooking={addBooking} loggedUser={loggedUser} />
-            </div>
-
+        
             <div>
                 <Gallery property={property} imageUrls={property.imageUrls} />
             </div>
 
-            <div>
-                <h2>{property.type} in {property.location}, hosted by {property.host.firstName}</h2>
-            </div>
-
-            <div>
-                <Description text={property.description} />
-            </div>
-
-            <div>
-                <AmenityList categories={amenityCategories} amenities={property.amenities} />
+            <div className="grid2rows">
+                <div className="padding1">
+                    <h2 className="text-align-left">{property.type} in {property.location}, hosted by {property.host.firstName}</h2>
+                    <br></br>
+                    <Description text={property.description} />
+                </div>
+                <div>
+                    <NewBookingForm property={property} addBooking={addBooking} loggedUser={loggedUser} />
+                </div>
             </div>
 
             <div className="row-wrap">
-                <div className="padding1">
+                <AmenityList categories={amenityCategories} amenities={property.amenities} />
+            </div>
+
+            <div className="row-wrap align-left">
+                <div className="card">
                     <FacilityList facilities={property.facilities} />
                 </div>
 
-                <div className="padding1">
+                <div className="card">
                     <CheckTimes property={property} />
                 </div>
 
-                <div className="padding1">
-                    <PropertyRulesList propertyRules={property.propertyRules} />
-                </div>
+                {property.propertyRules.length != 0 ? 
+                <div className="card">
+                    <PropertyRulesList propertyRules={property.propertyRules}/>
+                </div> : null}
 
                 {property.parkingOptions.length != 0 ? 
-                <div className="padding1">
+                <div className="card">
                     <ParkingOptions parkingOptions={property.parkingOptions}/>
                 </div> : null}
             </div>
             
             <div>
-                <ReviewList  reviews={property.reviews}/>
+                {property.reviews.length != 0 ?
+                <ReviewList  reviews={property.reviews}/> :
+                <p>This property doesn't have any reviews yet.</p>}
             </div>
         </div>
     )

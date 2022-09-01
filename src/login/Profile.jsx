@@ -5,7 +5,7 @@ import LogoutButton from "./LogoutButton";
 import MyReviewList from "../account/MyReviewList";
 import MyBookingList from "../account/MyBookingList";
 
-const Profile = ({ loggedUser }) => {
+const Profile = ({ loggedUser, setLoggedUser }) => {
   const { user, isLoading, isAuthenticated } = useAuth0();
 
   if (isLoading) {
