@@ -3,12 +3,9 @@ import React from "react";
 const Parking = ({ parking }) => {
 
     return (
-        <div>
-            <span>
-                {parking.isFree ? <p>Free </p> : null}
-                <p>{parking.title}</p>
-            </span>
-        </div>
+        <li className="custom-li">
+            {parking.isFree ? <p>Free {parking.title}</p> : <p>{parking.title}</p>}
+        </li>
     )
 }
 

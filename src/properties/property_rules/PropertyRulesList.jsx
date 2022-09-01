@@ -5,8 +5,8 @@ const PropertyRulesList = ({ propertyRules }) => {
     const listItems = propertyRules.map(element => <PropertyRule key={element.id} propertyRule={element} />)
 
     return (
-        <div>
-            <h3>Rules</h3>
+        <div className="card padding1">
+            <h4 className="text-align-left">Rules</h4>
             <ul>{ listItems }</ul>
         </div>
     )

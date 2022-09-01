@@ -1,20 +1,20 @@
-const baseURL = 'http://localhost:8080/api/public/properties/'
+const baseURL = 'http://localhost:8080/api/public/bookings/'
 
-const PropertyService = {
+const BookingService = {
     getProperties() {
         return fetch(baseURL)
             .then(res => res.json());
     },
 
-    findProperty(id) {
+    findBooking(id) {
       return fetch(baseURL + id)
           .then(res => res.json());
     },
 
-    updateProperty(property) {
-        return fetch(baseURL + property.id, {
+    updateBooking(booking) {
+        return fetch(baseURL + booking.id, {
             method: 'PUT',
-            body: JSON.stringify(property),
+            body: JSON.stringify(booking),
             headers: {
                 'Content-Type': 'application/json'
             }
@@ -22,10 +22,11 @@ const PropertyService = {
             .then(res => res.json());
     },
 
-    addProperty(property) {
+    addBooking(booking) {
+      console.log(booking)
         return fetch(baseURL, {
           method: 'POST',
-          body: JSON.stringify(property),
+          body: JSON.stringify(booking),
           headers: {
             'Content-Type': 'application/json'
           }
@@ -33,11 +34,11 @@ const PropertyService = {
           .then(res => res.json());
     },
 
-    deleteProperty(id) {
+    deleteBooking(id) {
         return fetch(baseURL + id, {
           method: 'DELETE'
         });
     }
 }
 
-export default PropertyService;
+export default BookingService;

@@ -7,7 +7,7 @@ const PropertyList = ({ properties }) => {
     })
 
     return (
-            <ul className="cards" >
+            <ul className="row-wrap cards" >
                 { itemList }
             </ul>
     )

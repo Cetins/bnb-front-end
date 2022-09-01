@@ -1,0 +1,44 @@
+.form {
+    display: flex;
+    justify-self: flex-start;
+    margin-bottom: 1em;
+}
+
+.form-items {
+    display: flex;
+    justify-self: start;
+    align-items: baseline;
+}
+
+.input {
+    border: solid 1px rgb(191, 191, 191);
+    border-radius: .5em;
+    padding: .2em;
+}
+
+.label {
+    display: inline;
+}
+
+.label, .input {
+    text-align: left;
+    line-height: 35px;
+    height: 30px;
+    margin-bottom: 5px;
+    margin-right: .5em;
+    width: 160px;
+}
+
+.box {
+    display: flex;
+    border: solid 1px rgb(194, 193, 193);
+    border-radius: .5em;
+    padding: .5em .5em 0 .5em;
+    margin: 1em;
+    width: fit-content;
+}
+
+.text-box {
+    height: 10em;
+    width: 20em;
+}

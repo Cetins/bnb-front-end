@@ -3,14 +3,15 @@ import AmenityCategory from "./AmenityCategory";
 
 const AmenityList = ({ categories, amenities }) => {
 
-    const itemList = categories.map(category => {
-        return <AmenityCategory category={category} amenities={amenities} />
+    const itemList = categories.map((category, index) => {
+        return <AmenityCategory key={index} category={category} amenities={amenities} />
     })
 
     return (
         <div>
             <h3>Amenities</h3>
-            <div className="amenities">
+            <hr></hr>
+            <div className="row-wrap">
                 { itemList }
             </div>
         </div>

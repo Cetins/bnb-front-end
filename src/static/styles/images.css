@@ -14,3 +14,38 @@
 .logo {
     height: 3em;
 }
+
+.profile-img {
+    border-radius: 50%;
+    height: 5em;
+}
+
+.gallery-img-1 {
+    width: 35em;
+    height: 30.4em;
+    border-top-left-radius: 1em;
+    border-bottom-left-radius: 1em;
+    object-fit: cover;
+}
+
+.gallery-img-4 {
+    border-top-right-radius: 1em;
+}
+
+.gallery-img-5 {
+    border-bottom-right-radius: 1em;
+}
+
+.gallery-img-2, .gallery-img-3, .gallery-img-4, .gallery-img-5 {
+    width: 15em;
+    height: 15em;
+    object-fit: cover;
+}
+
+.gallery-img-1, .gallery-img-2, .gallery-img-3, .gallery-img-4, .gallery-img-5 {
+    margin: .2em;
+}
+
+.img-gallery-page {
+    width: 80vw;
+}

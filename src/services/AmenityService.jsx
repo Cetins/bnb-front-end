@@ -1,4 +1,4 @@
-const baseURL = 'http://localhost:8080/api/amenities'
+const baseURL = 'http://localhost:8080/api/public/amenities'
 
 const AmenityService = {
     getAmenities() {

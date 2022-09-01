@@ -8,10 +8,10 @@ const PropertyCard = ({ property }) => {
     const url = "/property/" + property.id
 
     return (
-        <div className="card">
+        <div className="margin5">
             <PropertyImage coverUrl={ property.coverImage } />
             <IconContainer property={property} />
-            <p>£ {property.rate * 3} for 3 nights</p>
+            <p className="text-align-left">£ {property.rate * 3} for 3 nights</p>
             <Link to={url} >more...</Link>
         </div>
     )
