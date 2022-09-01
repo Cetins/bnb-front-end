@@ -68,35 +68,44 @@ const Property = ({ loggedUser }) => {
                 </div>
             </div>
 
-            <div className="row-wrap">
+            <div className="row-wrap margin-left-3">
                 <AmenityList categories={amenityCategories} amenities={property.amenities} />
             </div>
 
-            <div className="row-wrap align-left">
-                <div className="card">
-                    <FacilityList facilities={property.facilities} />
-                </div>
-
-                <div className="card">
-                    <CheckTimes property={property} />
-                </div>
-
-                {property.propertyRules.length != 0 ? 
-                <div className="card">
-                    <PropertyRulesList propertyRules={property.propertyRules}/>
-                </div> : null}
-
-                {property.parkingOptions.length != 0 ? 
-                <div className="card">
-                    <ParkingOptions parkingOptions={property.parkingOptions}/>
-                </div> : null}
-            </div>
-            
             <div>
-                {property.reviews.length != 0 ?
-                <ReviewList  reviews={property.reviews}/> :
-                <p>This property doesn't have any reviews yet.</p>}
+                <h3>This property also offers</h3>
+                <hr></hr>
+                <div className="row-wrap">
+                    <div className="card">
+                        <FacilityList facilities={property.facilities} />
+                    </div>
+
+                    <div className="card">
+                        <CheckTimes property={property} />
+                    </div>
+
+                    {property.propertyRules.length != 0 ? 
+                    <div className="card">
+                        <PropertyRulesList propertyRules={property.propertyRules}/>
+                    </div> : null}
+
+                    {property.parkingOptions.length != 0 ? 
+                    <div className="card">
+                        <ParkingOptions parkingOptions={property.parkingOptions}/>
+                    </div> : null}
+                </div>
             </div>
+
+            <div className="row-wrap align-left">
+                <div>
+                    {property.reviews.length != 0 ?
+                    <ReviewList  reviews={property.reviews}/> :
+                    <p>This property doesn't have any reviews yet.</p>}
+                </div>
+            </div>
+
+
+            
         </div>
     )
 }
