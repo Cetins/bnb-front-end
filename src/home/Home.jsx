@@ -1,6 +1,4 @@
 import React, { useEffect, useState } from "react";
-import LogComponent from "../login/LogComponent";
-import Profile from "../login/Profile";
 import PropertyService from "../services/PropertyService"
 import PropertyList from "../properties/PropertyList";
 
@@ -13,10 +11,9 @@ const Home = () => {
     });
 
     return (
-        <>
-            <LogComponent />
+        <div className="parent-container">
             <PropertyList properties={properties} />
-        </>
+        </div>
     )
 }
 

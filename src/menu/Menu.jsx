@@ -1,34 +1,26 @@
 import React from "react";
 import { Link } from "react-router-dom"
-import "./Menu.css";
 
-const Menu = () => {
+
+const Menu = ({loggedUser}) => {
+    
     return (
-        <div className="menu-div">
-            <h1>CodeBNB</h1>
-            <nav>
-            <ul>
-                <li className='nav-links'>
-                    <Link to="/">Home</Link>
+        <nav className="navbar">
+            <Link to="/">
+                <img className="logo" src={require("../static/images/logo.png")} />
+            </Link>           
+            <ul className="nav-links">
+                <li className='nav-item'><Link to="/admin"> Admin </Link></li>
+                <li className='nav-item'>
+                {loggedUser? <p>Welcome, {loggedUser.firstName}</p> : <p>Login</p>}
                 </li>
-                <li className='nav-links'>
-                    <Link to="/admin">Admin</Link>
+                <li className="nav-item">
+                    <Link to="/account">
+                        <img className="icon" src={require("../static/images/person.png")}/>
+                    </Link>
                 </li>
-                {/* <li className='nav-links'>
-                    <Link to="/become-a-host">Become a host</Link>
-                </li>
-                <li className='nav-links'>
-                    <Link to="/sign-up">Sign up</Link>
-                </li>
-                <li className='nav-links'>
-                    <Link to="/log-in">Log in</Link>
-                </li>
-                <li className='nav-links'>
-                    <Link to="/help">Help</Link>
-                </li> */}
             </ul>
-            </nav>
-        </div>
+        </nav>
     )
 }
 
