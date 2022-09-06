@@ -1,70 +1,29 @@
-# Getting Started with Create React App
+# Code BNB 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<img width="600" alt="Screenshot 2022-09-06 at 14 26 43" src="https://user-images.githubusercontent.com/69481095/188647243-7d71cf51-2691-4dc7-8332-07fd7c344254.png">
 
-## Available Scripts
+## Capstone project for CodeClan Software Develeopment
 
-In the project directory, you can run:
+This repository is only for the front end code, to see the back end code please visit => https://github.com/Cetins/bnb-back-end 
 
-### `npm start`
+## About
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+This is a property rental application, my reference point is AirBnb. Home page lists all the properties and if you click on the "more" you'll be redirected to the property page and see the details for the property. Additionally you can click on the cover gallery module to access all images of the related property in a different page.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+<img width="600" alt="Screenshot 2022-09-06 at 14 29 14" src="https://user-images.githubusercontent.com/69481095/188653677-3f2debe0-c8ab-46eb-8e7f-cb7f630a4010.png">
 
-### `npm test`
+### React
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+I've used `"react-router-dom": "^6.3.0"` for routing in this app. It creates a convenient page routing for react without causing so much trouble and still giving the single-page-app functionality with React. All components designed from scratch, no additional library used. Same goes for the styling, I didn't use any dependancy, it's all vanilla CSS.
 
-### `npm run build`
+<img width="464" alt="Screenshot 2022-09-06 at 14 32 32" src="https://user-images.githubusercontent.com/69481095/188653343-ace3b762-f72d-4eeb-9ed2-d55e79ec7661.png">
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Auth0
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+This was a simple set set up via Auth0 website. In this version there isn't any customization in functionality so nothing complicated. If you want to recreate this project for educational purposes, I would suggest to follow instructions in Auth0 website. As far as I see they update their documentation regularly and set up is really easy. 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<img width="227" alt="Screenshot 2022-09-06 at 14 32 48" src="https://user-images.githubusercontent.com/69481095/188653996-8fe0c319-3477-479b-aee9-2efa2de74ad0.png">
 
-### `npm run eject`
+## Goals
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project solely created for educational purposes therefore the languages, frameworks selected here is not intented for real life. In CodeClan we've been taught 3 main languages; Python with Flask, Javascript with React and Java with Spring. In every module we learned and practiced how to work within one language. After completing Java Module I've decided to branch my knowledge and bring together all the things I've learned. I intentionally discard Python because I've already had lots of opportunity to work with it and overall it was the most compfortable language for me. So I've decided to work with React and Java. If you think it wasn't the best choice, it's ok. 
